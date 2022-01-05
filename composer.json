@@ -1,0 +1,12 @@
+{
+    "name": "mauricerenck/ogimage",
+    "version": "1.0.0",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maurice Renck",
+            "email": "hello@maurice-renck.de"
+        }
+    ]
+}

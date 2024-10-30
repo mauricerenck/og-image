@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/mauricerenck/og-image/compare/v1.1.1...v1.1.2) (2024-10-30)
+
+
+### Bug Fixes
+
+* add kirby composer installer ([e8fd3fd](https://github.com/mauricerenck/og-image/commit/e8fd3fd96059276bac2fcb7a7b5c2c0f56990bc6))
+
 ## [1.1.1](https://github.com/mauricerenck/og-image/compare/v1.1.0...v1.1.1) (2024-10-30)
 
 

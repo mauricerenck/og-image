@@ -11,6 +11,10 @@ class ComposerStaticInit43e4bf87f07fe85c472d97f0aae0c9b8
         array (
             'mauricerenck\\OgImage\\' => 21,
         ),
+        'K' => 
+        array (
+            'Kirby\\' => 6,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -18,10 +22,18 @@ class ComposerStaticInit43e4bf87f07fe85c472d97f0aae0c9b8
         array (
             0 => __DIR__ . '/../..' . '/lib',
         ),
+        'Kirby\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/getkirby/composer-installer/src',
+        ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Kirby\\ComposerInstaller\\CmsInstaller' => __DIR__ . '/..' . '/getkirby/composer-installer/src/ComposerInstaller/CmsInstaller.php',
+        'Kirby\\ComposerInstaller\\Installer' => __DIR__ . '/..' . '/getkirby/composer-installer/src/ComposerInstaller/Installer.php',
+        'Kirby\\ComposerInstaller\\Plugin' => __DIR__ . '/..' . '/getkirby/composer-installer/src/ComposerInstaller/Plugin.php',
+        'Kirby\\ComposerInstaller\\PluginInstaller' => __DIR__ . '/..' . '/getkirby/composer-installer/src/ComposerInstaller/PluginInstaller.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

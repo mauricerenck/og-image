@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'mauricerenck\\OgImage\\' => array($baseDir . '/lib'),
+    'Kirby\\' => array($vendorDir . '/getkirby/composer-installer/src'),
 );

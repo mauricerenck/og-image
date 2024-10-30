@@ -26,7 +26,8 @@
         }
     },
     "require": {
-        "php": ">=8.2.0"
+        "php": ">=8.2.0",
+        "getkirby/composer-installer": "^1.2"
     },
     "scripts": {
         "test": "vendor/bin/phpunit --testdox --colors=always",

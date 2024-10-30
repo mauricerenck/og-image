@@ -8,7 +8,7 @@ use Kirby\Cms\App as Kirby;
 @include_once __DIR__ . '/vendor/autoload.php';
 
 Kirby::plugin('mauricerenck/ogimage', [
-    'pageMethods' => require_once __DIR__ . '/libs/page-methods.php',
+    'pageMethods' => require_once __DIR__ . '/lib/page-methods.php',
     'routes' => [
         [
             'pattern' => '(:all)/og-image',

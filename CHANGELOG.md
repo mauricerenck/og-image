@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/mauricerenck/og-image/compare/v1.1.3...v1.1.4) (2024-10-30)
+
+
+### Bug Fixes
+
+* no words… ([54fc41f](https://github.com/mauricerenck/og-image/commit/54fc41f8267d3814e93d99a684243bdbccaa6e61))
+
 ## [1.1.3](https://github.com/mauricerenck/og-image/compare/v1.1.2...v1.1.3) (2024-10-30)
 
 

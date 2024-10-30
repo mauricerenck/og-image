@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/mauricerenck/og-image/compare/v1.1.0...v1.1.1) (2024-10-30)
+
+
+### Bug Fixes
+
+* license date ([05a198b](https://github.com/mauricerenck/og-image/commit/05a198b342793a15f3c5ff33602a2f4a0bad1290))
+
 # [1.1.0](https://github.com/mauricerenck/og-image/compare/v1.0.1...v1.1.0) (2024-10-30)
 
 

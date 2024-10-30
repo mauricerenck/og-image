@@ -1,6 +1,8 @@
 {
     "name": "mauricerenck/ogimage",
     "version": "1.0.0",
+    "homepage": "https://github.com/mauricerenck/og-image",
+    "description": "Creates an Open Graph Image for each page",
     "type": "kirby-plugin",
     "license": "MIT",
     "authors": [
@@ -8,5 +10,22 @@
             "name": "Maurice Renck",
             "email": "hello@maurice-renck.de"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "mauricerenck\\Komments\\": "lib/"
+        },
+        "classmap": [
+            "lib"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        }
+    },
+    "require": {
+        "php": ">=8.2.0"
+    }
 }

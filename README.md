@@ -12,8 +12,8 @@ This plugin creates an og-image for a page based on a template image and a text 
 
 Use one of these methods to install the plugin:
 
--   composer (recommended): `composer require mauricerenck/komments`
--   zip file: unzip [main.zip](https://github.com/mauricerenck/komments/releases/latest) as folder `site/plugins/komments`
+-   composer (recommended): `composer require mauricerenck/ogimage`
+-   zip file: unzip [main.zip](https://github.com/mauricerenck/ogimage/releases/latest) as folder `site/plugins/ogimage`
 
 ## Prerequisites
 

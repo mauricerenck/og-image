@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/mauricerenck/og-image/compare/v1.1.2...v1.1.3) (2024-10-30)
+
+
+### Bug Fixes
+
+* import ([87c2264](https://github.com/mauricerenck/og-image/commit/87c22644be9b37cef37422bf530e113731c2a956))
+
 ## [1.1.2](https://github.com/mauricerenck/og-image/compare/v1.1.1...v1.1.2) (2024-10-30)
 
 

@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "mauricerenck\\Komments\\": "lib/"
+            "mauricerenck\\OgImage\\": "lib/"
         },
         "classmap": [
             "lib"
@@ -27,5 +27,13 @@
     },
     "require": {
         "php": ">=8.2.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox --colors=always",
+        "build-test-package": "git archive HEAD -o ogimage.zip --worktree-attributes",
+        "build-composer": "composer install --no-dev --optimize-autoloader",
+        "build-release": [
+            "composer install --no-dev --optimize-autoloader"
+        ]
     }
 }

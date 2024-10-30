@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mauricerenck/og-image/compare/v1.0.1...v1.1.0) (2024-10-30)
+
+
+### Features
+
+* composer autoloading ([620c5a6](https://github.com/mauricerenck/og-image/commit/620c5a6aa2ef7628734038c536c37acfc1b5ded1))
+
 ## [1.0.1](https://github.com/mauricerenck/og-image/compare/v1.0.0...v1.0.1) (2024-10-30)
 
 

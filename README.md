@@ -38,7 +38,7 @@ You can configure the position of the text, and the hero image, even crop it to 
 
 Add the following meta tags to your HTML `<head>` tag:
 
-````html
+```html
 <meta property="og:image" content="<?= $page->url(); ?>/og-image">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="600">

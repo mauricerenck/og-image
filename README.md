@@ -44,7 +44,30 @@ Add the following meta tags to your HTML `<head>` tag:
 <meta property="og:image:height" content="600">
 ```
 
-## OPTIONS
+## In your config
+
+Given you have True Type Font and a template image, you want to add a text to, you can configure the plugin in your `config.php`. Let say you have a transparent area in your template which should be filled with the hero image of your page. Let's also say, you want to fill that transparent area with a color if no hero image is set:
+
+```php
+<?php
+return [
+    "mauricerenck.ogimage" => [
+        "font.path" => "assets/spectral-regular-webfont.ttf", // path to your ttf font relative from your document root
+        "font.size" => 50,
+        "font.lineheight" => 1.5,
+        "image.template" => "assets/img/og-image-template.png", // path to your template image relative from your document root
+        "title.position" => [300, 35], // x,y position of your text in pixel
+        "title.charactersPerLine" => 30, // number of characters before a line break
+        "heroImage.field" => 'myHero, // fieldname of the hero image
+        "heroImage.cropsize" => [738, 465], // size in pixels of the rendered hero image
+        "heroImage.position" => [429, 287], // x,y position of the hero image on the template image
+        "heroImage.fallbackColor" => [3, 105, 161], // r,g,b color to fill the hero-image area if no image given
+        "heroImage.fallbackImage" => "assets/img/og-image-hero-fallback.png", // OR path to a fallback when the hero image is not given
+    ]
+]
+```
+
+## Options
 
 **Please make sure to prefix all the options with `mauricerenck.ogimage.`**.
 

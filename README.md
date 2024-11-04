@@ -34,6 +34,16 @@ This plugins listens to `/og-image` on any page. It will go through the followin
 
 You can configure the position of the text, and the hero image, even crop it to position it below transparent areas of your template image.
 
+## In your template
+
+Add the following meta tags to your HTML `<head>` tag:
+
+````html
+<meta property="og:image" content="<?= $page->url(); ?>/og-image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="600">
+```
+
 ## OPTIONS
 
 **Please make sure to prefix all the options with `mauricerenck.ogimage.`**.

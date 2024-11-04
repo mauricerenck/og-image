@@ -6,7 +6,7 @@
 
 ---
 
-This plugin creates an og-image for a page based on a template image and a text input. Simply add `/og-image` to any url to get the og-image for that page.
+This plugin creates an og-image for a page, based on a template image and a text input. Simply add `/og-image` to any url to get the og-image for that page.
 
 ## Installation
 
@@ -75,6 +75,7 @@ return [
 | --------------------------------- | -------- | ------------------------------------------------------------------------------------------------ |
 | `width` | `1600` | width of the resulting og-image |
 | `height` | `900` | height of the resulting og-image |
+| `field` | `'ogImage'` | field for manualy setting an image |
 | `image.template` | `./../assets/template.png` | path to your og-image template image |
 | `font.path` | `''` | **mandatory** (missing font will result in an error) |
 | `font.color` | `[0, 0, 0]` | color of the font [r,g,b] |

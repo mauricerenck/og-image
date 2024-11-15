@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/mauricerenck/og-image/compare/v1.1.5...v1.1.6) (2024-11-15)
+
+
+### Bug Fixes
+
+* better handling of none and multilanguage sites ([73a4736](https://github.com/mauricerenck/og-image/commit/73a4736356ec7c2cda8150ab8e32014b14734443))
+
 ## [1.1.5](https://github.com/mauricerenck/og-image/compare/v1.1.4...v1.1.5) (2024-11-04)
 
 

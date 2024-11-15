@@ -33,10 +33,10 @@ Kirby::plugin('mauricerenck/ogimage', [
         ],
         [
             'pattern' => ['(:all)/og-image', 'og-image'],
-            'language' => '*',
-            'action' => function ($lang, $slug) {
+            'action' => function ($slug) {
                 $languages = kirby()->languages();
                 $language = null;
+
                 if (count($languages) > 1) {
                     $language = null;
                     $slugParts = explode('/', $slug);
@@ -48,7 +48,7 @@ Kirby::plugin('mauricerenck/ogimage', [
                 }
 
                 $languageString = is_null($language) ? 'default' : $language;
-                $page = ($slug == '/' || $slug == 'og-image') ? site()->homePage() : $page = page($slug);
+                $page = ($slug == '/' || $slug == 'og-image') ? site()->homePage() : page($slug);
 
                 if (!$page) {
                     return new Response('Page "' . $slug . '" not found', 'text/plain', 404);

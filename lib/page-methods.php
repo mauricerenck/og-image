@@ -47,9 +47,16 @@ return [
             return;
         }
 
+        if ($language == 'default') {
+            $title = $this->{$titleField}()->isNotEmpty() ? $this->{$titleField}() : $this->title();
+        } else {
+            $translation = $this->translation($language);
+            $content = $translation->content();
+            $title = !empty($content[$titleField]) ? $content[$titleField] : $content['title'];
+        }
+
         $canvas = imagecreatetruecolor($imageWidth, $imageHeight);
         $textColor = imagecolorallocate($canvas, $fontColor[0], $fontColor[1], $fontColor[2]);
-        $title = $this->{$titleField}()->isNotEmpty() ? $this->{$titleField}() : $this->title();
         $templateImage = imagecreatefrompng($templateImagePath);
 
         $backgroundFile = !is_null($this->{$heroImageField}()) && $this->{$heroImageField}()->isNotEmpty()

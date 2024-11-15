@@ -33,11 +33,12 @@ Kirby::plugin('mauricerenck/ogimage', [
         ],
         [
             'pattern' => ['(:all)/og-image', 'og-image'],
-            'action' => function ($slug) {
+            'language' => '*',
+            'action' => function ($lang, $slug) {
                 $languages = kirby()->languages();
                 $language = null;
                 if (count($languages) > 1) {
-                    $language = kirby()->language()->code();
+                    $language = null;
                     $slugParts = explode('/', $slug);
 
                     if (in_array($slugParts[0], $languages->codes())) {
@@ -57,12 +58,12 @@ Kirby::plugin('mauricerenck/ogimage', [
                     return new Response($page->getOgImage()->read(), 'image/png');
                 }
 
-                if ($page->hasGeneratedOgImage()) {
+                if ($page->hasGeneratedOgImage($languageString)) {
                     return new Response($page->image('generated-og-image.' . $languageString . '.png')->read(), 'image/png');
                 }
 
                 try {
-                    $page->createOgImage();
+                    $page->createOgImage($languageString);
                     return new Response($page->image('generated-og-image.' . $languageString . '.png')->read(), 'image/png');
                 } catch (\Exception $e) {
                     return new Response($e->getMessage(), 'text/plain', 500);

@@ -7,11 +7,8 @@ return [
         $ogImageField = option('mauricerenck.ogimage.field', 'ogImage');
         return (!is_null($this->{$ogImageField}()) && $this->{$ogImageField}()->isNotEmpty());
     },
-    'hasGeneratedOgImage' => function () {
-        $language = $this->kirby()->language();
-        $languageString = is_null($language) ? 'default' : $language->code();
-        $filename = 'generated-og-image.' . $languageString . '.png';
-
+    'hasGeneratedOgImage' => function (string $language) {
+        $filename = 'generated-og-image.' . $language . '.png';
         $savedOgImage = !is_null($this->image($filename)) && $this->image($filename)->exists();
 
         return $savedOgImage;
@@ -25,7 +22,7 @@ return [
             ? $this->{$ogImageField}()->toFile()->crop($imageWidth, $imageHeight)
             : null;
     },
-    'createOgImage' => function () {
+    'createOgImage' => function (string $language) {
         $imageWidth = option('mauricerenck.ogimage.width', 1600);
         $imageHeight = option('mauricerenck.ogimage.height', 900);
 
@@ -135,9 +132,7 @@ return [
         $tempFile = tempnam(sys_get_temp_dir(), 'png');
         imagepng($canvas, $tempFile);
 
-        $language = $this->kirby()->language();
-        $languageString = is_null($language) ? 'default' : $language->code();
-        $filename = 'generated-og-image.' . $languageString . '.png';
+        $filename = 'generated-og-image.' . $language . '.png';
 
         kirby()->impersonate('kirby');
         if (!is_null($this->file($filename)) && $this->file($filename)->exist()) {

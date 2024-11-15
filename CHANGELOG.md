@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/mauricerenck/og-image/compare/v1.1.6...v1.1.7) (2024-11-15)
+
+
+### Bug Fixes
+
+* handle translations ([7f409d5](https://github.com/mauricerenck/og-image/commit/7f409d55e90fcee23d2b38c99d8dc9d1be70a3a3))
+
 ## [1.1.6](https://github.com/mauricerenck/og-image/compare/v1.1.5...v1.1.6) (2024-11-15)
 
 

@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/mauricerenck/og-image/compare/v1.1.7...v1.1.8) (2024-12-30)
+
+
+### Bug Fixes
+
+* position of fallback image ([37c959e](https://github.com/mauricerenck/og-image/commit/37c959e2724df81056b0afc463b24ed5e1190fe7))
+
 ## [1.1.7](https://github.com/mauricerenck/og-image/compare/v1.1.6...v1.1.7) (2024-11-15)
 
 

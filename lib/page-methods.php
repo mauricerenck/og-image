@@ -99,8 +99,8 @@ return [
             imagecopyresampled(
                 $canvas,
                 $background,
-                $heroImagePosition[0],
-                $heroImagePosition[1],
+                0,
+                0,
                 0,
                 0,
                 imagesx($background),

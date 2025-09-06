@@ -3,7 +3,7 @@
         'name' => 'mauricerenck/ogimage',
         'pretty_version' => '1.1.8',
         'version' => '1.1.8.0',
-        'reference' => NULL,
+        'reference' => null,
         'type' => 'kirby-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'mauricerenck/ogimage' => array(
             'pretty_version' => '1.1.8',
             'version' => '1.1.8.0',
-            'reference' => NULL,
+            'reference' => null,
             'type' => 'kirby-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

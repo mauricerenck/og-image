@@ -30,7 +30,7 @@
     "getkirby/composer-installer": "^1.2"
   },
   "require-dev": {
-    "getkirby/cms": "^4"
+    "getkirby/cms": "^5"
   },
   "scripts": {
     "test": "vendor/bin/phpunit --testdox --colors=always",

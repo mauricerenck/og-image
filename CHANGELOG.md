@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/mauricerenck/og-image/compare/v1.1.8...v1.1.9) (2025-09-06)
+
+
+### Bug Fixes
+
+* language detection ([75ea9c4](https://github.com/mauricerenck/og-image/commit/75ea9c4427eb87e74a9c58d2bd57a46c3ad729ce)), closes [#1](https://github.com/mauricerenck/og-image/issues/1)
+
 ## [1.1.8](https://github.com/mauricerenck/og-image/compare/v1.1.7...v1.1.8) (2024-12-30)
 
 

@@ -1,8 +1,8 @@
 <?php return array(
     'root' => array(
         'name' => 'mauricerenck/ogimage',
-        'pretty_version' => '1.1.8',
-        'version' => '1.1.8.0',
+        'pretty_version' => '1.1.9',
+        'version' => '1.1.9.0',
         'reference' => null,
         'type' => 'kirby-plugin',
         'install_path' => __DIR__ . '/../../',
@@ -20,8 +20,8 @@
             'dev_requirement' => false,
         ),
         'mauricerenck/ogimage' => array(
-            'pretty_version' => '1.1.8',
-            'version' => '1.1.8.0',
+            'pretty_version' => '1.1.9',
+            'version' => '1.1.9.0',
             'reference' => null,
             'type' => 'kirby-plugin',
             'install_path' => __DIR__ . '/../../',

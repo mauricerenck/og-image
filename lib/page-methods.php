@@ -42,6 +42,8 @@ return [
         $titleField = option('mauricerenck.ogimage.title.field', 'title');
         $titlePosition = option('mauricerenck.ogimage.title.position', [0, 0]);
         $titleCharactersPerLine = option('mauricerenck.ogimage.title.charactersPerLine', 20);
+        $titleCenterX = option('mauricerenck.ogimage.title.centerX', false);
+        $titleCenterY = option('mauricerenck.ogimage.title.centerY', false);
 
         if (is_null($font)) {
             return;
@@ -130,9 +132,24 @@ return [
         $imageTitle = wordwrap($title, $titleCharactersPerLine, "\n", true);
         $lines = explode("\n", $imageTitle);
 
+        $xPosition = $titlePosition[0];
+        $yPosition = $titlePosition[1];
+
+        $lineCount = count($lines);
+        if ($titleCenterY) {
+            $textHeight = $fontSize * $fontLineHeight * $lineCount;
+            $yPosition = intval(($imageHeight - $textHeight) / 2);
+        }
+
         $y = $fontSize;
         foreach ($lines as $line) {
-            imagettftext($canvas, $fontSize, 0, $titlePosition[0], $titlePosition[1] + $y, $textColor, $font, $line);
+            if ($titleCenterX) {
+                $bbox = imagettfbbox($fontSize, 0, $font, $line);
+                $textWidth = $bbox[2] - $bbox[0];
+                $xPosition = intval(($imageWidth -  $textWidth) / 2);
+            }
+
+            imagettftext($canvas, $fontSize, 0, $xPosition, $yPosition + $y, $textColor, $font, $line);
             $y += $fontSize * $fontLineHeight; // Increase the y position for the next line
         }
 

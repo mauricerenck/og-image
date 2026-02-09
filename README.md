@@ -12,15 +12,15 @@ This plugin creates an og-image for a page, based on a template image and a text
 
 Use one of these methods to install the plugin:
 
--   composer (recommended): `composer require mauricerenck/ogimage`
--   zip file: unzip [main.zip](https://github.com/mauricerenck/ogimage/releases/latest) as folder `site/plugins/ogimage`
+- composer (recommended): `composer require mauricerenck/ogimage`
+- zip file: unzip [main.zip](https://github.com/mauricerenck/ogimage/releases/latest) as folder `site/plugins/ogimage`
 
 ## Prerequisites
 
 This plugin requires the following assets to be present:
 
--  a ttf font file
--  a png template image
+- a ttf font file
+- a png template image
 
 You can find a sample template image in the `assets` folder of this plugin.
 
@@ -39,9 +39,9 @@ You can configure the position of the text, and the hero image, even crop it to 
 Add the following meta tags to your HTML `<head>` tag:
 
 ```html
-<meta property="og:image" content="<?= $page->url(); ?>/og-image">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="600">
+<meta property="og:image" content="<?= $page->url(); ?>/og-image" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
 ```
 
 ## In your config
@@ -71,20 +71,22 @@ return [
 
 **Please make sure to prefix all the options with `mauricerenck.ogimage.`**.
 
-| Option                            | Default  | Description                                                                                      |
-| --------------------------------- | -------- | ------------------------------------------------------------------------------------------------ |
-| `width` | `1600` | width of the resulting og-image |
-| `height` | `900` | height of the resulting og-image |
-| `field` | `'ogImage'` | field for manualy setting an image |
-| `image.template` | `./../assets/template.png` | path to your og-image template image |
-| `font.path` | `''` | **mandatory** (missing font will result in an error) |
-| `font.color` | `[0, 0, 0]` | color of the font [r,g,b] |
-| `font.size` | `80` | size of the font |
-| `heroImage.field` | `hero` | path to your og-image template image |
-| `heroImage.cropSize` | `[600, 600]` | Size in pixels of the rendered hero image |
-| `heroImage.position` | `[0,0]` | x,y position of the hero image on the template image |
-| `heroImage.fallbackColor` | `[255, 123, 123]` | [r,g,b] color to fill the hero-image area if no image given |
-| `heroImage.fallbackImage` | `null` | path to a fallback when the hero image is not given  |
-| `title.field` | `title` | The name of the field your want to use as title |
-| `title.position` | `[0, 0]` | [x,y] position of your text |
-| `title.charactersPerLine` | `20` | Number of characters before a line break |
+| Option                    | Default                    | Description                                                 |
+| ------------------------- | -------------------------- | ----------------------------------------------------------- |
+| `width`                   | `1600`                     | width of the resulting og-image                             |
+| `height`                  | `900`                      | height of the resulting og-image                            |
+| `field`                   | `'ogImage'`                | field for manualy setting an image                          |
+| `image.template`          | `./../assets/template.png` | path to your og-image template image                        |
+| `font.path`               | `''`                       | **mandatory** (missing font will result in an error)        |
+| `font.color`              | `[0, 0, 0]`                | color of the font [r,g,b]                                   |
+| `font.size`               | `80`                       | size of the font                                            |
+| `heroImage.field`         | `hero`                     | path to your og-image template image                        |
+| `heroImage.cropSize`      | `[600, 600]`               | Size in pixels of the rendered hero image                   |
+| `heroImage.position`      | `[0,0]`                    | x,y position of the hero image on the template image        |
+| `heroImage.fallbackColor` | `[255, 123, 123]`          | [r,g,b] color to fill the hero-image area if no image given |
+| `heroImage.fallbackImage` | `null`                     | path to a fallback when the hero image is not given         |
+| `title.field`             | `title`                    | The name of the field your want to use as title             |
+| `title.position`          | `[0, 0]`                   | [x,y] position of your text                                 |
+| `title.charactersPerLine` | `20`                       | Number of characters before a line break                    |
+| `title.centerX`           | `false`                    | Center text on x-axis                                       |
+| `title.centerY`           | `false`                    | Center text on y-axis                                       |

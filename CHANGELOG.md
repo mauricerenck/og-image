@@ -1,5 +1,11 @@
 ## [1.2.0] - 2026-05-21
 
+## [1.2.2] - 2026-05-21
+
+### 🐛 Bug Fixes
+
+- get release notes from changelog ([`9e94ec2`](https://mauricerenck@github.com/mauricerenck/og-image/commit/9e94ec2c2e8c85ce7ebd66ad864a9ce385bae48b))
+
 ## [1.2.1] - 2026-05-21
 
 ### 🐛 Bug Fixes

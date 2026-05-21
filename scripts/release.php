@@ -33,8 +33,9 @@ echo "Bump type: {$bump}\n";
 $nextVersion = bumpVersion($currentVersion, $bump);
 echo "Next version: {$nextVersion}\n";
 
-writeVersion($nextVersion);
-updateChangelog($nextVersion, $commits);
+$changedPhpFiles = writeVersion($nextVersion);
+updateChangelog($nextVersion, $commits);      // erst Changelog schreiben
+extractCurrentChangelog($nextVersion);         // dann daraus lesen
 createGitTag($nextVersion);
 
 echo "\nDone. Now run: git push && git push --tags\n";
@@ -74,7 +75,7 @@ function bumpVersion(string $version, string $bump): string
     };
 }
 
-function writeVersion(string $version): void
+function writeVersion(string $version): string
 {
     updateJsonFile('composer.json', $version);
 
@@ -83,7 +84,8 @@ function writeVersion(string $version): void
     }
 
     updatePluginVersion($version);
-    extractCurrentChangelog($version); // neu
+    extractCurrentChangelog($version);
+    return $version;
 }
 
 
@@ -183,13 +185,19 @@ function updateChangelog(string $version, array $commits): void
         $existing = "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n";
     }
 
-    // Insert after the first heading
-    if (preg_match('/^(#[^\n]+\n(?:[^\n]*\n)*?\n)/m', $existing, $m)) {
+    $file = 'CHANGELOG.md';
+    $existing = file_exists($file) ? file_get_contents($file) : '';
+
+    if ($existing === '') {
+        $content = "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n" . $block;
+    } elseif (preg_match('/^(# [^\n]+\n\n(?:[^#].*\n)*\n?)/m', $existing, $m)) {
+        // Insert after header + subtitle paragraph, before first ## entry
         $header  = $m[1];
         $rest    = substr($existing, strlen($header));
         $content = $header . $block . $rest;
     } else {
-        $content = $existing . $block;
+        // No recognizable header, just prepend
+        $content = $block . $existing;
     }
 
     file_put_contents($file, $content);

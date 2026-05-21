@@ -83,7 +83,9 @@ function writeVersion(string $version): void
     }
 
     updatePluginVersion($version);
+    extractCurrentChangelog($version); // neu
 }
+
 
 function updateJsonFile(string $path, string $version): void
 {
@@ -194,6 +196,20 @@ function updateChangelog(string $version, array $commits): void
     echo "  Updated CHANGELOG.md\n";
 }
 
+function extractCurrentChangelog(string $version): void
+{
+    if (!file_exists('CHANGELOG.md')) return;
+
+    $content = file_get_contents('CHANGELOG.md');
+
+    preg_match('/## \[' . preg_quote($version) . '\].*?\n(.*?)(?=\n## |\z)/s', $content, $m);
+
+    if (!empty($m[1])) {
+        file_put_contents('.release-notes', trim($m[1]));
+        echo "  Created .release-notes\n";
+    }
+}
+
 function getRepoUrl(): ?string
 {
     $remote = trim(shell_exec('git remote get-url origin 2>/dev/null') ?? '');
@@ -214,7 +230,7 @@ function createGitTag(string $version): void
 {
     $tag = "v{$version}";
 
-    shell_exec('git add composer.json package.json CHANGELOG.md');
+    shell_exec('git add composer.json package.json CHANGELOG.md .release-notes');
     shell_exec('git add $(git ls-files --modified "*.php") 2>/dev/null');
 
     $staged = trim(shell_exec('git diff --cached --name-only') ?? '');

@@ -41,3 +41,4 @@
 /~
 /content/phpunit/.lock
 /.ddev
+.release-notes

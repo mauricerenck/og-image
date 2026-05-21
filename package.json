@@ -1,6 +1,6 @@
 {
     "name": "ogimage",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "An ogimage plugin for Kirby",
     "main": "index.js",
     "author": "Maurice Renck",

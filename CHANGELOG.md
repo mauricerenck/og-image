@@ -1,5 +1,11 @@
 ## [1.2.0] - 2026-05-21
 
+## [1.2.1] - 2026-05-21
+
+### 🐛 Bug Fixes
+
+- **semver:** remove old packages and clean up ([`1599024`](https://mauricerenck@github.com/mauricerenck/og-image/commit/1599024275aa6ccebb563a70f0e051da74aa65de))
+
 ### ✨ Features
 
 - **semver:** new flow ([`220d5eb`](https://mauricerenck@github.com/mauricerenck/og-image/commit/220d5eb0fc812b37b0aee32c5d90f30a797dc195))

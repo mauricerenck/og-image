@@ -1,10 +1,12 @@
-## [1.2.0] - 2026-05-21
+# [1.1.0](https://github.com/mauricerenck/og-image/compare/v1.0.1...v1.1.0) (2024-10-30)
 
-## [1.2.2] - 2026-05-21
+## [1.2.3] - 2026-05-21
 
 ### 🐛 Bug Fixes
 
-- get release notes from changelog ([`9e94ec2`](https://mauricerenck@github.com/mauricerenck/og-image/commit/9e94ec2c2e8c85ce7ebd66ad864a9ce385bae48b))
+- **semver:** changelog ([`1b1cd5c`](https://mauricerenck@github.com/mauricerenck/og-image/commit/1b1cd5cbc45cd1fbfc282e834eb5d2f6f8a16aad))
+
+from changelog ([`9e94ec2`](https://mauricerenck@github.com/mauricerenck/og-image/commit/9e94ec2c2e8c85ce7ebd66ad864a9ce385bae48b))
 
 ## [1.2.1] - 2026-05-21
 

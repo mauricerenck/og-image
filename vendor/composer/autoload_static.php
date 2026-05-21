@@ -7,22 +7,22 @@ namespace Composer\Autoload;
 class ComposerStaticInit43e4bf87f07fe85c472d97f0aae0c9b8
 {
     public static $prefixLengthsPsr4 = array (
-        'm' => 
+        'm' =>
         array (
             'mauricerenck\\OgImage\\' => 21,
         ),
-        'K' => 
+        'K' =>
         array (
             'Kirby\\' => 6,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'mauricerenck\\OgImage\\' => 
+        'mauricerenck\\OgImage\\' =>
         array (
             0 => __DIR__ . '/../..' . '/lib',
         ),
-        'Kirby\\' => 
+        'Kirby\\' =>
         array (
             0 => __DIR__ . '/..' . '/getkirby/composer-installer/src',
         ),

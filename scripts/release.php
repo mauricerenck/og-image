@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-chdir(dirname(__DIR__));
+
 
 $lastTag = trim(shell_exec('git describe --tags --abbrev=0 2>/dev/null') ?? '');
 $currentVersion = $lastTag ? ltrim($lastTag, 'v') : '0.0.0';

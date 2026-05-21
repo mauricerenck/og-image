@@ -11,13 +11,5 @@
     },
     "posthtml": {
         "recognizeSelfClosing": true
-    },
-    "dependencies": {
-        "semver": "^7.6.3"
-    },
-    "devDependencies": {
-        "@ambimax/semantic-release-composer": "github:ambimax/semantic-release-composer",
-        "@semantic-release/changelog": "^6.0.3",
-        "@semantic-release/git": "^10.0.1"
     }
 }

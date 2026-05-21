@@ -1,28 +1,18 @@
-name: CI
+name: Release
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*"
+
 jobs:
   release:
-    name: Release
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 21
-
-      - name: Install
-        run: npm install
-
-      - name: Release
+          generate_release_notes: true # Auto-Changelog aus Commits
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_SEMANTIC_RELEASE }}
-        run: npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Kein PAT nötig!

@@ -13,6 +13,6 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          generate_release_notes: true # Auto-Changelog aus Commits
+          generate_release_notes: true # Auto-Changelog from Commits
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Kein PAT nötig!
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

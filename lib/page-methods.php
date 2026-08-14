@@ -149,7 +149,7 @@ return [
                 $xPosition = intval(($imageWidth -  $textWidth) / 2);
             }
 
-            imagettftext($canvas, $fontSize, 0, $xPosition, $yPosition + $y, $textColor, $font, $line);
+            imagettftext($canvas, $fontSize, 0, $xPosition, round($yPosition + $y), $textColor, $font, $line);
             $y += $fontSize * $fontLineHeight; // Increase the y position for the next line
         }
 

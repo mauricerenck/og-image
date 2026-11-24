@@ -1,15 +1,15 @@
 {
-    "name": "ogimage",
-    "version": "1.2.3",
-    "description": "An ogimage plugin for Kirby",
-    "main": "index.js",
-    "author": "Maurice Renck",
-    "private": true,
-    "scripts": {
-        "dev": "npx -y kirbyup serve src/index.js",
-        "build": "npx -y kirbyup src/index.js"
-    },
-    "posthtml": {
-        "recognizeSelfClosing": true
-    }
+  "name": "ogimage",
+  "version": "1.2.3",
+  "description": "An ogimage plugin for Kirby",
+  "main": "index.js",
+  "author": "Maurice Renck",
+  "private": true,
+  "scripts": {
+    "dev": "npx -y kirbyup serve src/index.js",
+    "build": "npx -y kirbyup src/index.js"
+  },
+  "posthtml": {
+    "recognizeSelfClosing": true
+  }
 }
